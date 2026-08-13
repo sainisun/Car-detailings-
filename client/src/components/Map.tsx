@@ -76,7 +76,8 @@
 
 /// <reference types="@types/google.maps" />
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { usePersistFn } from "@/hooks/usePersistFn";
 import { cn } from "@/lib/utils";
 
@@ -93,17 +94,18 @@ const FORGE_BASE_URL =
 const MAPS_PROXY_URL = `${FORGE_BASE_URL}/v1/maps/proxy`;
 
 function loadMapScript() {
-  return new Promise(resolve => {
+  return new Promise<boolean>(resolve => {
     const script = document.createElement("script");
     script.src = `${MAPS_PROXY_URL}/maps/api/js?key=${API_KEY}&v=weekly&libraries=marker,places,geocoding,geometry`;
     script.async = true;
     script.crossOrigin = "anonymous";
     script.onload = () => {
-      resolve(null);
+      resolve(true);
       script.remove(); // Clean up immediately
     };
     script.onerror = () => {
       console.error("Failed to load Google Maps script");
+      resolve(false);
     };
     document.head.appendChild(script);
   });
@@ -114,6 +116,7 @@ interface MapViewProps {
   initialCenter?: google.maps.LatLngLiteral;
   initialZoom?: number;
   onMapReady?: (map: google.maps.Map) => void;
+  fallbackUrl?: string;
 }
 
 export function MapView({
@@ -121,12 +124,19 @@ export function MapView({
   initialCenter = { lat: 37.7749, lng: -122.4194 },
   initialZoom = 12,
   onMapReady,
+  fallbackUrl = "https://www.google.com/maps?q=India&output=embed",
 }: MapViewProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<google.maps.Map | null>(null);
+  const [mapState, setMapState] = useState<"loading" | "interactive" | "fallback">(API_KEY ? "loading" : "fallback");
 
   const init = usePersistFn(async () => {
-    await loadMapScript();
+    if (!API_KEY) return;
+    const loaded = await loadMapScript();
+    if (!loaded) {
+      setMapState("fallback");
+      return;
+    }
     if (!mapContainer.current) {
       console.error("Map container not found");
       return;
@@ -140,6 +150,7 @@ export function MapView({
       streetViewControl: true,
       mapId: "DEMO_MAP_ID",
     });
+    setMapState("interactive");
     if (onMapReady) {
       onMapReady(map.current);
     }
@@ -149,7 +160,8 @@ export function MapView({
     init();
   }, [init]);
 
-  return (
-    <div ref={mapContainer} className={cn("w-full h-[500px]", className)} />
-  );
+  if (mapState === "fallback") {
+    return <div className={cn("map-fallback", className)}><iframe className="map-fallback-iframe" src={fallbackUrl} title="Google Maps location for Shree Sanwaliya Car Detailing & Service" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><div className="map-fallback-overlay"><span><MapPin size={13} /> Google Maps / Dadi</span><strong>Before HP Petrol Pump</strong><small>Main Neemkathana Road · Rajasthan</small><a href={fallbackUrl} target="_blank" rel="noreferrer">Open map <ArrowUpRight size={14} /></a></div></div>;
+  }
+  return <div ref={mapContainer} className={cn("w-full h-[500px]", className)} aria-label="Interactive Google Map" />;
 }

@@ -2,7 +2,7 @@
  * Style reminder: mobile-first Indian workshop editorial—tactile images, gold
  * service routes, generous tap targets, and floating motion that stays useful.
  */
-import { ArrowDownRight, ArrowUpRight, Check, ChevronDown, PhoneCall, ShieldCheck } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Check, ChevronDown, MessageCircle, PhoneCall, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
 import { CalloutStrip, SectionLabel } from "@/components/SiteChrome";
 import { assets, phone, serviceGroups, values } from "@/lib/siteData";
@@ -33,7 +33,7 @@ export default function Home() {
 
     <section className="home-india"><div className="shell-width home-india-grid"><div><SectionLabel number="04" eyebrow="Made for the road here" /><h2>Dust, distance,<br /><span>daily drives.</span></h2><p className="body-copy">From the route into town to the road home, your vehicle works hard. Shree Sanwaliya keeps the care conversation straightforward for local cars, SUVs, and pickups.</p><Link className="text-link" href="/visit"><span>Find the workshop</span><ArrowUpRight size={16} /></Link></div><div className="home-india-card"><img src={assets.mechanical} alt="Indian mechanic working beside a utility pickup in a workshop" /><div><span>Cars + pickups</span><strong>Practical care<br />for the next drive.</strong></div></div></div></section>
 
-    <section className="home-contact"><div className="shell-width home-contact-inner"><div><SectionLabel number="05" eyebrow="Find the bay" /><h2>Bring it in.<br /><em>We’ll handle the details.</em></h2><p>Call ahead or use directions for car detailing, washing, polishing, light work, rubbing, and broader workshop support.</p></div><div className="home-contact-card"><ShieldCheck size={22} /><small>Call the workshop</small><strong>{phone}</strong><a className="button button--gold" href={`tel:${phone}`}>Call now <PhoneCall size={16} /></a></div></div></section>
+    <section className="home-contact"><div className="shell-width home-contact-inner"><div><SectionLabel number="05" eyebrow="Find the bay" /><h2>Bring it in.<br /><em>We’ll handle the details.</em></h2><p>Call ahead, send a WhatsApp note, or use the appointment form for car detailing, washing, polishing, light work, rubbing, and broader workshop support.</p><div className="home-contact-actions"><a className="button button--gold" href={`tel:${phone}`}>Call now <PhoneCall size={16} /></a><Link className="button button--outline" href="/visit#appointment"><MessageCircle size={16} /> Book on WhatsApp</Link></div></div><div className="home-contact-card"><ShieldCheck size={22} /><small>Direct workshop line</small><strong>{phone}</strong><a className="text-link" href="/visit#appointment"><span>Open appointment form</span><ArrowUpRight size={16} /></a></div></div></section>
     <CalloutStrip title="Your next clean start is one call away." />
   </div>;
 }

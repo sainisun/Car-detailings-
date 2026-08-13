@@ -3,9 +3,9 @@
  * workshop instrument panel—graphite glass, gold route marks, direct actions.
  */
 import { useEffect, useState } from "react";
-import { ArrowUpRight, ChevronRight, Menu, PhoneCall, X } from "lucide-react";
+import { ArrowUpRight, ChevronRight, Menu, MessageCircle, PhoneCall, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { address, assets, mapUrl, navItems, phone } from "@/lib/siteData";
+import { address, assets, mapUrl, navItems, phone, whatsappPhone } from "@/lib/siteData";
 
 export function BrandMark() {
   return (
@@ -88,7 +88,7 @@ export function FloatingMotion() {
 export function SiteLayout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior }); }, [location]);
-  return <div className="site-shell"><SiteHeader /><FloatingMotion /><main>{children}</main><SiteFooter /><a href={`tel:${phone}`} className="floating-call" aria-label={`Call workshop at ${phone}`}><PhoneCall size={18} /><span>Call us</span></a></div>;
+  return <div className="site-shell"><SiteHeader /><FloatingMotion /><main>{children}</main><SiteFooter /><a href={`tel:${phone}`} className="floating-call" aria-label={`Call workshop at ${phone}`}><PhoneCall size={18} /><span>Call us</span></a><a href={`https://wa.me/${whatsappPhone}?text=${encodeURIComponent("Hello Shree Sanwaliya, I would like to enquire about a vehicle service.")}`} target="_blank" rel="noreferrer" className="floating-whatsapp" aria-label="Message Shree Sanwaliya on WhatsApp"><MessageCircle size={18} /><span>WhatsApp</span></a></div>;
 }
 
 export function SectionLabel({ eyebrow, number }: { eyebrow: string; number: string }) {
@@ -100,7 +100,7 @@ export function PageIntro({ number, eyebrow, title, accent, lead, image }: { num
 }
 
 export function CalloutStrip({ title = "Bring your car in. We’ll handle the details." }: { title?: string }) {
-  return <section className="callout-strip"><div className="shell-width callout-inner"><div><SectionLabel number="→" eyebrow="Talk to the workshop" /><h2>{title}</h2></div><a className="button button--gold" href={`tel:${phone}`}>Call {phone} <PhoneCall size={16} /></a></div></section>;
+  return <section className="callout-strip"><div className="shell-width callout-inner"><div><SectionLabel number="→" eyebrow="Talk to the workshop" /><h2>{title}</h2></div><div className="callout-actions"><a className="button button--gold" href={`tel:${phone}`}>Call {phone} <PhoneCall size={16} /></a><a className="button button--outline" href={`https://wa.me/${whatsappPhone}?text=${encodeURIComponent("Hello Shree Sanwaliya, I would like to enquire about a vehicle service.")}`} target="_blank" rel="noreferrer">WhatsApp <MessageCircle size={16} /></a></div></div></section>;
 }
 
 export function Breadcrumb({ label }: { label: string }) {

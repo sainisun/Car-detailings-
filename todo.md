@@ -30,3 +30,14 @@
 - [ ] Run the local Vercel-compatible build and validate the output.
 - [ ] Push the deployment fix to GitHub.
 - [ ] Verify the Vercel deployment and record any dashboard redeploy action required.
+
+## Enhancement Round
+
+- [x] Add local SEO metadata, structured service/location copy, and a crawlable sitemap/robots setup.
+- [x] Add Google Maps location rendering for the confirmed workshop address.
+- [x] Add WhatsApp appointment booking with a prefilled enquiry message and a direct call path.
+- [x] Add mobile-first booking UI and richer floating interactions with reduced-motion support.
+- [x] Generate authentic Indian local car-detailing visuals and replace generic image panels.
+- [x] Add a transparent Meet the Founder section without inventing an unconfirmed founder name or biography.
+- [x] Add or strengthen the About page content and route navigation.
+- [x] Test SEO output, map rendering, WhatsApp link, call link, and responsive routes.

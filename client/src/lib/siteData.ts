@@ -6,8 +6,11 @@ import type { LucideIcon } from "lucide-react";
 import { CarFront, Droplets, Gauge, Sparkles, SprayCan, Wrench, Zap } from "lucide-react";
 
 export const phone = "8947880552";
+export const whatsappPhone = "918947880552";
 export const address = "Before HP Petrol Pump, Main Neemkathana Road, Dadi, Rajasthan";
 export const mapUrl = "https://www.google.com/maps/search/?api=1&query=Shree+Sanwaliya+Car+Detailing+and+Service%2C+Dadi%2C+Rajasthan";
+export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+export const bookingMessage = "Hello Shree Sanwaliya Car Detailing & Service, I would like to enquire about a service for my vehicle.";
 
 export const assets = {
   hero: "/manus-storage/sanwaliya-indian-workshop_6b55c250.jpg",
@@ -15,6 +18,7 @@ export const assets = {
   foamWash: "/manus-storage/sanwaliya-indian-garage_48d7a1bd.jpg",
   mechanical: "/manus-storage/sanwaliya-fallback-workshop_8aec2b49.jpg",
   interior: "/manus-storage/sanwaliya-fallback-polish_e00617de.jpg",
+  founder: "/manus-storage/sanwaliya-fallback-workshop_8aec2b49.jpg",
   fallbackHero: "/manus-storage/sanwaliya-hero-reference_dab87993.jpg",
   fallbackWorkshop: "/manus-storage/sanwaliya-fallback-workshop_8aec2b49.jpg",
   fallbackPolish: "/manus-storage/sanwaliya-fallback-polish_e00617de.jpg",
