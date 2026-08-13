@@ -83,4 +83,12 @@
 - [x] Expand About into an in-depth founder and workshop story without inventing name, years, awards, or credentials.
 - [x] Add dedicated service imagery and article-style content to every service detail page.
 - [x] Validate all routes, images, responsive layouts, and founder attribution.
-- [ ] Save and push the founder-led expansion.
+- [x] Save and push the founder-led expansion.
+
+## Live Image-Only Fix
+
+- [x] Audit all live image references that still depend on Manus storage.
+- [x] Copy the existing generated images into repository-safe public media.
+- [x] Change only image source paths; do not change design, layout, copy, animation, or routes.
+- [x] Validate the image files in the Vercel production output.
+- [ ] Save, push, and verify the image-only deployment fix.
