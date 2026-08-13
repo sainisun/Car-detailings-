@@ -7,6 +7,7 @@ import { CarFront, Droplets, Gauge, Sparkles, SprayCan, Wrench, Zap } from "luci
 
 export const phone = "8947880552";
 export const whatsappPhone = "918947880552";
+export const founderName = "Ayush Sharma";
 export const address = "Main Nainwa Road, Dei, Bundi, Rajasthan, 323802";
 export const location = { lat: 25.690720, lng: 75.929624 };
 export const mapUrl = "https://maps.app.goo.gl/TH3Fi57hhgdaCjK59?g_st=ac";

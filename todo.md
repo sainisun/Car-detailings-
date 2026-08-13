@@ -101,3 +101,11 @@
 - [x] Add the verified Google Maps location section to the Home page.
 - [x] Fix the founder thumbnail crop on the mobile Home page without changing desktop composition.
 - [x] Validate mobile and desktop routes and push the completed update.
+
+## WhatsApp and Founder Name Update
+
+- [x] Audit the shared floating WhatsApp control and all founder name references.
+- [x] Ensure a floating WhatsApp button is present across every route with the correct number and message.
+- [x] Replace founder attribution copy with Ayush Sharma everywhere it appears.
+- [x] Validate all routes, mobile positioning, links, and build output.
+- [ ] Save and push the update.
