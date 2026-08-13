@@ -49,4 +49,12 @@
 - [x] Replace Manus-only image URLs with relative Vercel-safe paths.
 - [x] Validate every referenced image exists in the production output.
 - [x] Test image rendering on representative mobile and desktop routes.
-- [ ] Commit and push the image asset fix to GitHub.
+- [x] Commit and push the image asset fix to GitHub.
+
+## Exact Location Update
+
+- [x] Open the user-provided Google Maps listing and extract the exact business name and address.
+- [x] Update the shared address and map directions constants.
+- [x] Update Visit page, footer, SEO schema, sitemap, and visible location copy.
+- [x] Validate the map embed and directions link on mobile and desktop.
+- [ ] Save and push the verified location update to GitHub.

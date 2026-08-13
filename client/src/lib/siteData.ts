@@ -7,9 +7,10 @@ import { CarFront, Droplets, Gauge, Sparkles, SprayCan, Wrench, Zap } from "luci
 
 export const phone = "8947880552";
 export const whatsappPhone = "918947880552";
-export const address = "Before HP Petrol Pump, Main Neemkathana Road, Dadi, Rajasthan";
-export const mapUrl = "https://www.google.com/maps/search/?api=1&query=Shree+Sanwaliya+Car+Detailing+and+Service%2C+Dadi%2C+Rajasthan";
-export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+export const address = "Shri Sanwaliya Car Detailing & Service, SH34/SH37A, Motipura, Loharpura, Nainwa Tehsil, Bundi, Rajasthan, India";
+export const location = { lat: 25.690720, lng: 75.929624 };
+export const mapUrl = "https://maps.app.goo.gl/TH3Fi57hhgdaCjK59?g_st=ac";
+export const mapEmbedUrl = "https://www.google.com/maps?q=25.690720,75.929624&z=16&output=embed";
 export const bookingMessage = "Hello Shree Sanwaliya Car Detailing & Service, I would like to enquire about a service for my vehicle.";
 
 export const assets = {
