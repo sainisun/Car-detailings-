@@ -15,11 +15,15 @@ export const bookingMessage = "Hello Shree Sanwaliya Car Detailing & Service, I 
 
 export const assets = {
   hero: "/media/sanwaliya-indian-workshop.jpg",
-  polish: "/media/sanwaliya-indian-detailing.webp",
-  foamWash: "/media/sanwaliya-indian-garage.jpg",
-  mechanical: "/media/sanwaliya-fallback-workshop.jpg",
+  polish: "/manus-storage/sanwaliya-founder-polish-final_b2d03a36.jpg",
+  foamWash: "/manus-storage/sanwaliya-founder-wash-final_9005c1e3.jpg",
+  mechanical: "/manus-storage/sanwaliya-founder-mechanical-final_5ecf2d64.jpg",
   interior: "/media/sanwaliya-fallback-polish.jpg",
-  founder: "/media/sanwaliya-fallback-workshop.jpg",
+  founder: "/manus-storage/sanwaliya-founder-office_8f2bc643.jpg",
+  founderOffice: "/manus-storage/sanwaliya-founder-office_8f2bc643.jpg",
+  founderFoamWash: "/manus-storage/sanwaliya-founder-wash-final_9005c1e3.jpg",
+  founderPolish: "/manus-storage/sanwaliya-founder-polish-final_b2d03a36.jpg",
+  founderMechanical: "/manus-storage/sanwaliya-founder-mechanical-final_5ecf2d64.jpg",
   fallbackHero: "/media/sanwaliya-hero-reference.jpg",
   fallbackWorkshop: "/media/sanwaliya-fallback-workshop.jpg",
   fallbackPolish: "/media/sanwaliya-fallback-polish.jpg",
@@ -40,6 +44,9 @@ export type ServiceGroup = {
   included: string[];
   bestFor: string;
   note: string;
+  articleTitle: string;
+  articleIntro: string;
+  articleSections: { heading: string; copy: string }[];
 };
 
 export const serviceGroups: ServiceGroup[] = [
@@ -57,6 +64,13 @@ export const serviceGroups: ServiceGroup[] = [
     included: ["Foam Washing", "Deep Cleaning", "Dry Cleaning"],
     bestFor: "Daily drivers, family cars, dusty road trips, and vehicles that need a clear reset.",
     note: "The final service mix is discussed directly with the workshop after a visual look at the vehicle.",
+    articleTitle: "A clean reset starts with the right read.",
+    articleIntro: "A local road leaves a vehicle with more than visible dust. Foam, cabin use, water marks, and the small edges around badges all tell the team where to begin.",
+    articleSections: [
+      { heading: "Start with the surface", copy: "The first conversation is visual and practical. The team looks at the body, glass, wheels, cabin touch points, and the areas that have collected the most road film." },
+      { heading: "Choose the depth of clean", copy: "Foam washing can set the reset in motion, while deep cleaning and dry cleaning bring more attention to the places everyday driving reaches. The final mix depends on the vehicle in front of the bay." },
+      { heading: "Leave with a clearer next step", copy: "The goal is not a complicated package. It is a cleaner vehicle, a clear handover conversation, and a practical understanding of what the vehicle may need next." },
+    ],
   },
   {
     slug: "polish-detailing",
@@ -72,6 +86,13 @@ export const serviceGroups: ServiceGroup[] = [
     included: ["Light Buffing", "Rubbing", "Polishing"],
     bestFor: "Vehicles with dullness, road film, visible marks, or a finish that needs more attention.",
     note: "The right level of surface work depends on paint condition, previous care, and the owner’s goal.",
+    articleTitle: "The finish is read before it is refined.",
+    articleIntro: "Polish and detailing are about more than adding shine. They are about understanding the paint, the road film, and the finish the vehicle can realistically support.",
+    articleSections: [
+      { heading: "Read the paint honestly", copy: "Visible dullness, marks, old residue, and the way light falls across the panel help define the route. That first look keeps surface work deliberate rather than rushed." },
+      { heading: "Work in considered passes", copy: "Light buffing, rubbing, and polishing each have a different role. The team chooses the practical sequence around the condition of the surface and the result the owner wants to discuss." },
+      { heading: "Bring back a composed reflection", copy: "A good finish is seen in the bonnet reflection, the clean edge around a badge, and the way the vehicle holds light after the work. The final pass is about clarity, not inflated promises." },
+    ],
   },
   {
     slug: "mechanical-work",
@@ -87,6 +108,13 @@ export const serviceGroups: ServiceGroup[] = [
     included: ["Vehicle inspection conversation", "Practical mechanical support", "Car and pickup servicing"],
     bestFor: "Cars and pickups that need a workshop look beyond cleaning and detailing.",
     note: "Specific mechanical jobs, parts, timing, and pricing should be confirmed directly with the workshop.",
+    articleTitle: "Workshop support begins with a direct conversation.",
+    articleIntro: "A mechanical concern is easier to handle when the vehicle, the symptom, and the next practical step are discussed together at the bay.",
+    articleSections: [
+      { heading: "Bring the concern to the bay", copy: "Tell the workshop what you are noticing, when it happens, and what kind of vehicle you are bringing. Cars and pickups can need different kinds of attention, so context matters." },
+      { heading: "Keep the work practical", copy: "The exact mechanical job is confirmed before work begins. This keeps the conversation grounded in the vehicle, the available workshop requirements, and the job that has actually been discussed." },
+      { heading: "Confirm what comes next", copy: "Before the vehicle leaves, the next step stays clear. Parts, timing, pricing, and any specific mechanical requirement should be confirmed directly with the workshop." },
+    ],
   },
 ];
 

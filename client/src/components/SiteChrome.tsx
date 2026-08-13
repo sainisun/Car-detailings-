@@ -69,7 +69,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="shell-width footer-main">
-        <div className="footer-brand"><LogoLockup /><p>Care for the road ahead.<br /><span>Dadi · Rajasthan</span></p></div>
+        <div className="footer-brand"><LogoLockup /><p>Care for the road ahead.<br /><span>Motipura · Bundi · Rajasthan</span></p></div>
         <div className="footer-columns">
           <div><small>Explore</small>{navItems.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}</div>
           <div><small>Services</small><Link href="/services/washing-cleaning">Washing &amp; cleaning</Link><Link href="/services/polish-detailing">Polish &amp; detailing</Link><Link href="/services/mechanical-work">Mechanical work</Link></div>
@@ -95,8 +95,8 @@ export function SectionLabel({ eyebrow, number }: { eyebrow: string; number: str
   return <div className="section-label"><span>{number}</span><i /><span>{eyebrow}</span></div>;
 }
 
-export function PageIntro({ number, eyebrow, title, accent, lead, image }: { number: string; eyebrow: string; title: string; accent: string; lead: string; image: string }) {
-  return <section className="page-intro"><div className="page-intro-image" style={{ backgroundImage: `url(${image})` }} /><div className="page-intro-shade" /><div className="shell-width page-intro-inner"><SectionLabel number={number} eyebrow={eyebrow} /><h1>{title}<br /><em>{accent}</em></h1><p>{lead}</p><div className="page-intro-line"><span>Shree Sanwaliya / Rajasthan</span><span>Car care · detailing · service</span></div></div></section>;
+export function PageIntro({ number, eyebrow, title, accent, lead, image, fallbackImage = "/media/sanwaliya-fallback-workshop.jpg" }: { number: string; eyebrow: string; title: string; accent: string; lead: string; image: string; fallbackImage?: string }) {
+  return <section className="page-intro"><img className="page-intro-image" src={image} alt="" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = fallbackImage; }} /><div className="page-intro-shade" /><div className="shell-width page-intro-inner"><SectionLabel number={number} eyebrow={eyebrow} /><h1>{title}<br /><em>{accent}</em></h1><p>{lead}</p><div className="page-intro-line"><span>Shree Sanwaliya / Rajasthan</span><span>Car care · detailing · service</span></div></div></section>;
 }
 
 export function CalloutStrip({ title = "Bring your car in. We’ll handle the details." }: { title?: string }) {

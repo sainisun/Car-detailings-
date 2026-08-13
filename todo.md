@@ -66,3 +66,21 @@
 - [x] Keep the exact directions link and a styled fallback if the iframe is blocked.
 - [x] Test the map panel on mobile and desktop.
 - [ ] Save and push the map visibility fix.
+
+## Post-Deployment Verification
+
+- [ ] Verify GitHub main and the latest Vercel deployment use commit `2a19fa2`.
+- [ ] Hard-refresh the live Visit Us page and confirm the map, directions, call, and WhatsApp actions.
+- [ ] Check whether interactive Google Maps credentials are available in the live build.
+- [ ] Enable or verify the interactive map path without removing the visible fallback.
+
+## Founder-Led Content Expansion
+
+- [x] Audit current Home, About, service data, and service detail page structures.
+- [x] Generate a professional founder office/setup visual using the supplied founder photo as reference.
+- [x] Generate separate founder-at-work visuals for washing, polishing/detailing, and mechanical service routes.
+- [x] Add a founder section to Home with approved factual positioning and the supplied founder image reference.
+- [x] Expand About into an in-depth founder and workshop story without inventing name, years, awards, or credentials.
+- [x] Add dedicated service imagery and article-style content to every service detail page.
+- [x] Validate all routes, images, responsive layouts, and founder attribution.
+- [ ] Save and push the founder-led expansion.
