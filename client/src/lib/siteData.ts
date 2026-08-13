@@ -13,16 +13,16 @@ export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(a
 export const bookingMessage = "Hello Shree Sanwaliya Car Detailing & Service, I would like to enquire about a service for my vehicle.";
 
 export const assets = {
-  hero: "/manus-storage/sanwaliya-indian-workshop_6b55c250.jpg",
-  polish: "/manus-storage/sanwaliya-indian-detailing_97badb2e.webp",
-  foamWash: "/manus-storage/sanwaliya-indian-garage_48d7a1bd.jpg",
-  mechanical: "/manus-storage/sanwaliya-fallback-workshop_8aec2b49.jpg",
-  interior: "/manus-storage/sanwaliya-fallback-polish_e00617de.jpg",
-  founder: "/manus-storage/sanwaliya-fallback-workshop_8aec2b49.jpg",
-  fallbackHero: "/manus-storage/sanwaliya-hero-reference_dab87993.jpg",
-  fallbackWorkshop: "/manus-storage/sanwaliya-fallback-workshop_8aec2b49.jpg",
-  fallbackPolish: "/manus-storage/sanwaliya-fallback-polish_e00617de.jpg",
-  mark: "/manus-storage/sanwaliya-mark_2ce3d916.png",
+  hero: "/media/sanwaliya-indian-workshop.jpg",
+  polish: "/media/sanwaliya-indian-detailing.webp",
+  foamWash: "/media/sanwaliya-indian-garage.jpg",
+  mechanical: "/media/sanwaliya-fallback-workshop.jpg",
+  interior: "/media/sanwaliya-fallback-polish.jpg",
+  founder: "/media/sanwaliya-fallback-workshop.jpg",
+  fallbackHero: "/media/sanwaliya-hero-reference.jpg",
+  fallbackWorkshop: "/media/sanwaliya-fallback-workshop.jpg",
+  fallbackPolish: "/media/sanwaliya-fallback-polish.jpg",
+  mark: "/media/sanwaliya-mark.svg",
 };
 
 export type ServiceGroup = {

@@ -41,3 +41,12 @@
 - [x] Add a transparent Meet the Founder section without inventing an unconfirmed founder name or biography.
 - [x] Add or strengthen the About page content and route navigation.
 - [x] Test SEO output, map rendering, WhatsApp link, call link, and responsive routes.
+
+## Vercel Image Asset Fix
+
+- [x] Audit all `/manus-storage/` image references used by the website.
+- [x] Copy optimized image files into repository-safe public assets.
+- [x] Replace Manus-only image URLs with relative Vercel-safe paths.
+- [x] Validate every referenced image exists in the production output.
+- [x] Test image rendering on representative mobile and desktop routes.
+- [ ] Commit and push the image asset fix to GitHub.
