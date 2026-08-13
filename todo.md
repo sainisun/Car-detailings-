@@ -16,8 +16,17 @@
 
 ## GitHub Delivery
 
-- [ ] Verify `sainisun/Car-detailings-` exists and inspect its default branch.
-- [ ] Confirm the local project has the expected website files and no accidental generated build output requiring removal.
-- [ ] Commit the completed website to the target repository.
-- [ ] Push the commit to the repository’s default branch.
-- [ ] Verify the pushed commit and repository URL.
+- [x] Verify `sainisun/Car-detailings-` exists and inspect its default branch.
+- [x] Confirm the local project has the expected website files and no accidental generated build output requiring removal.
+- [x] Commit the completed website to the target repository.
+- [x] Push the commit to the repository’s default branch.
+- [x] Verify the pushed commit and repository URL.
+
+## Vercel Deployment Troubleshooting
+
+- [ ] Inspect the Vercel project and latest deployment settings.
+- [ ] Confirm the repository root, build command, output directory, and framework preset.
+- [ ] Add or correct Vercel configuration so the deployed entry point serves the built React app rather than `server/index.ts`.
+- [ ] Run the local Vercel-compatible build and validate the output.
+- [ ] Push the deployment fix to GitHub.
+- [ ] Verify the Vercel deployment and record any dashboard redeploy action required.
