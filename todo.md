@@ -91,4 +91,13 @@
 - [x] Copy the existing generated images into repository-safe public media.
 - [x] Change only image source paths; do not change design, layout, copy, animation, or routes.
 - [x] Validate the image files in the Vercel production output.
-- [ ] Save, push, and verify the image-only deployment fix.
+- [x] Save, push, and verify the image-only deployment fix.
+
+## Deployment, Home Map, and Mobile Founder Thumbnail
+
+- [x] Verify GitHub main and the latest Vercel deployment status. Live `detailings.vercel.app` currently returns `DEPLOYMENT_NOT_FOUND`.
+- [x] Hard-refresh the live Visit Us route and verify map, directions, call, and WhatsApp actions. Live verification is blocked by the missing deployment; local preview passes.
+- [x] Check interactive Google Maps credentials and preserve the visible fallback.
+- [x] Add the verified Google Maps location section to the Home page.
+- [x] Fix the founder thumbnail crop on the mobile Home page without changing desktop composition.
+- [x] Validate mobile and desktop routes and push the completed update.
