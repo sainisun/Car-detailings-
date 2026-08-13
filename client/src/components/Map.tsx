@@ -117,6 +117,7 @@ interface MapViewProps {
   initialZoom?: number;
   onMapReady?: (map: google.maps.Map) => void;
   fallbackUrl?: string;
+  staticMapUrl?: string;
 }
 
 export function MapView({
@@ -125,6 +126,7 @@ export function MapView({
   initialZoom = 12,
   onMapReady,
   fallbackUrl = "https://www.google.com/maps?q=India&output=embed",
+  staticMapUrl = "/media/sanwaliya-location-map.png",
 }: MapViewProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<google.maps.Map | null>(null);
@@ -161,7 +163,7 @@ export function MapView({
   }, [init]);
 
   if (mapState === "fallback") {
-    return <div className={cn("map-fallback", className)}><iframe className="map-fallback-iframe" src={fallbackUrl} title="Google Maps location for Shree Sanwaliya Car Detailing & Service" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><div className="map-fallback-overlay"><span><MapPin size={13} /> Google Maps / Bundi</span><strong>SH34/SH37A · Motipura</strong><small>Loharpura · Nainwa Tehsil · Rajasthan</small><a href={fallbackUrl} target="_blank" rel="noreferrer">Open map <ArrowUpRight size={14} /></a></div></div>;
+    return <div className={cn("map-fallback", className)}><img className="map-fallback-static" src={staticMapUrl} alt="Map showing Shree Sanwaliya Car Detailing & Service near Motipura, Loharpura, Nainwa Tehsil, Bundi, Rajasthan" /><div className="map-fallback-overlay"><span><MapPin size={13} /> Google Maps / Bundi</span><strong>SH34/SH37A · Motipura</strong><small>Loharpura · Nainwa Tehsil · Rajasthan</small><a href={fallbackUrl} target="_blank" rel="noreferrer">Open Google Maps <ArrowUpRight size={14} /></a></div></div>;
   }
   return <div ref={mapContainer} className={cn("w-full h-[500px]", className)} aria-label="Interactive Google Map" />;
 }

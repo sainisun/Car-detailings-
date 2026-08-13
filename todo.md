@@ -57,4 +57,12 @@
 - [x] Update the shared address and map directions constants.
 - [x] Update Visit page, footer, SEO schema, sitemap, and visible location copy.
 - [x] Validate the map embed and directions link on mobile and desktop.
-- [ ] Save and push the verified location update to GitHub.
+- [x] Save and push the verified location update to GitHub.
+
+## Visible Map Embed Fix
+
+- [x] Audit why the current map panel is not visibly showing the Google map on the deployed Visit page.
+- [x] Add a clearly visible embedded Google Maps iframe using the verified coordinates.
+- [x] Keep the exact directions link and a styled fallback if the iframe is blocked.
+- [x] Test the map panel on mobile and desktop.
+- [ ] Save and push the map visibility fix.
