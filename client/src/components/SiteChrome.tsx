@@ -2,7 +2,7 @@
  * Style reminder: every shared chrome element should feel like a compact Indian
  * workshop instrument panel—graphite glass, gold route marks, direct actions.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { ArrowUpRight, ChevronRight, Menu, MessageCircle, PhoneCall, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { address, assets, mapUrl, navItems, phone, whatsappPhone } from "@/lib/siteData";
@@ -46,13 +46,26 @@ export function SiteHeader() {
 
   useEffect(() => setMenuOpen(false), [location]);
 
+  const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.includes("#")) return;
+    event.preventDefault();
+    const [path, hash] = href.split("#");
+    if (window.location.pathname !== path) {
+      window.location.href = href;
+      return;
+    }
+    document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", href);
+    setMenuOpen(false);
+  };
+
   return (
     <header className={`site-header ${scrolled ? "site-header--scrolled" : ""}`}>
       <div className="header-inner shell-width">
         <LogoLockup compact />
         <nav className={`desktop-nav ${menuOpen ? "desktop-nav--open" : ""}`} aria-label="Primary navigation">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={location === item.href ? "is-active" : ""}>{item.label}</Link>
+            <Link key={item.href} href={item.href} onClick={(event) => handleNavClick(event, item.href)} className={location === item.href ? "is-active" : ""}>{item.label}</Link>
           ))}
         </nav>
         <div className="header-actions">

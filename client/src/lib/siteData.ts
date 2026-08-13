@@ -132,6 +132,7 @@ export const navItems = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
+  { label: "Find us", href: "/#location" },
   { label: "Visit us", href: "/visit" },
 ];
 

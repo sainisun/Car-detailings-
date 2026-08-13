@@ -29,6 +29,7 @@
 :root { --radius: .3rem; --background: #090a0b; --foreground: #f4f0e8; --card: #111315; --card-foreground: #f4f0e8; --primary: #f5c400; --primary-foreground: #090a0b; --muted: #9d9b94; --muted-foreground: #85837d; --border: rgba(244,240,232,.14); --ring: #f5c400; --gold: #f5c400; --gold-soft: #ffe386; --graphite: #090a0b; --panel: #111315; --mist: #f4f0e8; --silver: #b6b4ad; --line: rgba(244,240,232,.18); --ease-out: cubic-bezier(.23,1,.32,1); }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--graphite); }
+#location { scroll-margin-top: 88px; }
 body { margin: 0; background: var(--graphite); color: var(--foreground); font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
 body, button, a { font-family: 'Manrope', sans-serif; }
 a { color: inherit; text-decoration: none; }
