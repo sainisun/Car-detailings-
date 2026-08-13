@@ -82,7 +82,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="shell-width footer-main">
-        <div className="footer-brand"><LogoLockup /><p>Care for the road ahead.<br /><span>Motipura · Bundi · Rajasthan</span></p></div>
+        <div className="footer-brand"><LogoLockup /><p>Care for the road ahead.<br /><span>Dei · Bundi · Rajasthan</span></p></div>
         <div className="footer-columns">
           <div><small>Explore</small>{navItems.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}</div>
           <div><small>Services</small><Link href="/services/washing-cleaning">Washing &amp; cleaning</Link><Link href="/services/polish-detailing">Polish &amp; detailing</Link><Link href="/services/mechanical-work">Mechanical work</Link></div>

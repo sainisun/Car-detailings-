@@ -163,7 +163,7 @@ export function MapView({
   }, [init]);
 
   if (mapState === "fallback") {
-    return <div className={cn("map-fallback", className)}><img className="map-fallback-static" src={staticMapUrl} alt="Map showing Shree Sanwaliya Car Detailing & Service near Motipura, Loharpura, Nainwa Tehsil, Bundi, Rajasthan" /><div className="map-fallback-overlay"><span><MapPin size={13} /> Google Maps / Bundi</span><strong>SH34/SH37A · Motipura</strong><small>Loharpura · Nainwa Tehsil · Rajasthan</small><a href={fallbackUrl} target="_blank" rel="noreferrer">Open Google Maps <ArrowUpRight size={14} /></a></div></div>;
+    return <div className={cn("map-fallback", className)}><img className="map-fallback-static" src={staticMapUrl} alt="Map showing Shree Sanwaliya Car Detailing & Service at Main Nainwa Road, Dei, Bundi, Rajasthan, 323802" /><div className="map-fallback-overlay"><span><MapPin size={13} /> Google Maps / Bundi</span><strong>Main Nainwa Road · Dei</strong><small>Bundi · Rajasthan · 323802</small><a href={fallbackUrl} target="_blank" rel="noreferrer">Open Google Maps <ArrowUpRight size={14} /></a></div></div>;
   }
   return <div ref={mapContainer} className={cn("w-full h-[500px]", className)} aria-label="Interactive Google Map" />;
 }
