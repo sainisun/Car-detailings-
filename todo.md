@@ -13,3 +13,11 @@
 - [x] Test every route on mobile and desktop, including menu behavior, phone links, directions link, and reduced-motion support.
 - [x] Run TypeScript check and production build.
 - [ ] Save a new checkpoint and deliver the expanded version.
+
+## GitHub Delivery
+
+- [ ] Verify `sainisun/Car-detailings-` exists and inspect its default branch.
+- [ ] Confirm the local project has the expected website files and no accidental generated build output requiring removal.
+- [ ] Commit the completed website to the target repository.
+- [ ] Push the commit to the repository’s default branch.
+- [ ] Verify the pushed commit and repository URL.
